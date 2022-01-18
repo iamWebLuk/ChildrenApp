@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../ProjectWithRepo/iOS_Project/iOS_Project.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:BachelorApp.xcodeproj">
    </FileRef>
    <FileRef
