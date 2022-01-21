@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		833D4BCC279837C30074774E /* SettingChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D4BCB279837C30074774E /* SettingChanges.swift */; };
+		833D4BCF27986ACA0074774E /* NewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D4BCE27986ACA0074774E /* NewButton.swift */; };
+		833D4BD127987D750074774E /* NewMathButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D4BD027987D740074774E /* NewMathButton.swift */; };
+		833D4BD527988F0C0074774E /* GermanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D4BD427988F0C0074774E /* GermanScreen.swift */; };
+		833D4BD72798901B0074774E /* GesamtScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D4BD62798901B0074774E /* GesamtScreen.swift */; };
+		833D4BDA279891A90074774E /* EnglishScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D4BD9279891A90074774E /* EnglishScreen.swift */; };
+		833D4BDD279891F60074774E /* SachScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D4BDC279891F60074774E /* SachScreen.swift */; };
+		833D4BDF2799CAFF0074774E /* VideoScreenForth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D4BDE2799CAFF0074774E /* VideoScreenForth.swift */; };
+		833D4BE12799CD810074774E /* ExerciseBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D4BE02799CD810074774E /* ExerciseBackButton.swift */; };
+		833D4BE32799D6440074774E /* LVBackButtonappearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D4BE22799D6440074774E /* LVBackButtonappearance.swift */; };
+		833D4BE52799DBB40074774E /* TitleLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D4BE42799DBB40074774E /* TitleLook.swift */; };
 		8356E64B277AF1CE009AE1BC /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356E64A277AF1CE009AE1BC /* Friend.swift */; };
 		8356E64D277AF285009AE1BC /* Friendlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356E64C277AF285009AE1BC /* Friendlist.swift */; };
 		8356E652277B4B80009AE1BC /* MathScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356E651277B4B80009AE1BC /* MathScreen.swift */; };
@@ -14,7 +25,7 @@
 		838B8D1027948ACC00AB2CF4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B8D0F27948ACC00AB2CF4 /* Settings.swift */; };
 		838B8D122796ED7800AB2CF4 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B8D112796ED7800AB2CF4 /* SettingsButton.swift */; };
 		83BAA952279305D1009D3E4B /* VideoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAA951279305D1009D3E4B /* VideoScreen.swift */; };
-		83BAA95427931B13009D3E4B /* VideoButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAA95327931B13009D3E4B /* VideoButtons.swift */; };
+		83BAA95427931B13009D3E4B /* VideoButtonBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAA95327931B13009D3E4B /* VideoButtonBack.swift */; };
 		83BAFC8D277B709600E106FA /* MainMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAFC8C277B709600E106FA /* MainMenuButton.swift */; };
 		83BAFC8F277B930E00E106FA /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAFC8E277B930E00E106FA /* MainButton.swift */; };
 		83C773AD2788DCC000E2D55A /* StartingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C773AC2788DCC000E2D55A /* StartingScreen.swift */; };
@@ -37,6 +48,17 @@
 
 /* Begin PBXFileReference section */
 		79808E7DF5B1502D7AA9C9F5 /* Pods-BachelorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BachelorApp.debug.xcconfig"; path = "Target Support Files/Pods-BachelorApp/Pods-BachelorApp.debug.xcconfig"; sourceTree = "<group>"; };
+		833D4BCB279837C30074774E /* SettingChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingChanges.swift; sourceTree = "<group>"; };
+		833D4BCE27986ACA0074774E /* NewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewButton.swift; sourceTree = "<group>"; };
+		833D4BD027987D740074774E /* NewMathButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMathButton.swift; sourceTree = "<group>"; };
+		833D4BD427988F0C0074774E /* GermanScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanScreen.swift; sourceTree = "<group>"; };
+		833D4BD62798901B0074774E /* GesamtScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesamtScreen.swift; sourceTree = "<group>"; };
+		833D4BD9279891A90074774E /* EnglishScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishScreen.swift; sourceTree = "<group>"; };
+		833D4BDC279891F60074774E /* SachScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SachScreen.swift; sourceTree = "<group>"; };
+		833D4BDE2799CAFF0074774E /* VideoScreenForth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreenForth.swift; sourceTree = "<group>"; };
+		833D4BE02799CD810074774E /* ExerciseBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseBackButton.swift; sourceTree = "<group>"; };
+		833D4BE22799D6440074774E /* LVBackButtonappearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVBackButtonappearance.swift; sourceTree = "<group>"; };
+		833D4BE42799DBB40074774E /* TitleLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLook.swift; sourceTree = "<group>"; };
 		8356E64A277AF1CE009AE1BC /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		8356E64C277AF285009AE1BC /* Friendlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friendlist.swift; sourceTree = "<group>"; };
 		8356E651277B4B80009AE1BC /* MathScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathScreen.swift; sourceTree = "<group>"; };
@@ -44,7 +66,7 @@
 		838B8D0F27948ACC00AB2CF4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		838B8D112796ED7800AB2CF4 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
 		83BAA951279305D1009D3E4B /* VideoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreen.swift; sourceTree = "<group>"; };
-		83BAA95327931B13009D3E4B /* VideoButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoButtons.swift; sourceTree = "<group>"; };
+		83BAA95327931B13009D3E4B /* VideoButtonBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoButtonBack.swift; sourceTree = "<group>"; };
 		83BAFC8C277B709600E106FA /* MainMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuButton.swift; sourceTree = "<group>"; };
 		83BAFC8E277B930E00E106FA /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		83C773AC2788DCC000E2D55A /* StartingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingScreen.swift; sourceTree = "<group>"; };
@@ -97,11 +119,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		833D4BCD27986AB30074774E /* NewButton */ = {
+			isa = PBXGroup;
+			children = (
+				833D4BCE27986ACA0074774E /* NewButton.swift */,
+			);
+			path = NewButton;
+			sourceTree = "<group>";
+		};
+		833D4BD227988EF20074774E /* LVs */ = {
+			isa = PBXGroup;
+			children = (
+				833D4BDB279891EB0074774E /* SachunterrichtScreen */,
+				833D4BD82798919E0074774E /* English */,
+				833D4BD327988F010074774E /* German */,
+				8356E64E277B4A78009AE1BC /* Math */,
+				833D4BD62798901B0074774E /* GesamtScreen.swift */,
+				833D4BE22799D6440074774E /* LVBackButtonappearance.swift */,
+				833D4BE42799DBB40074774E /* TitleLook.swift */,
+			);
+			path = LVs;
+			sourceTree = "<group>";
+		};
+		833D4BD327988F010074774E /* German */ = {
+			isa = PBXGroup;
+			children = (
+				833D4BD427988F0C0074774E /* GermanScreen.swift */,
+			);
+			path = German;
+			sourceTree = "<group>";
+		};
+		833D4BD82798919E0074774E /* English */ = {
+			isa = PBXGroup;
+			children = (
+				833D4BD9279891A90074774E /* EnglishScreen.swift */,
+			);
+			path = English;
+			sourceTree = "<group>";
+		};
+		833D4BDB279891EB0074774E /* SachunterrichtScreen */ = {
+			isa = PBXGroup;
+			children = (
+				833D4BDC279891F60074774E /* SachScreen.swift */,
+			);
+			path = SachunterrichtScreen;
+			sourceTree = "<group>";
+		};
 		8356E64E277B4A78009AE1BC /* Math */ = {
 			isa = PBXGroup;
 			children = (
 				8356E651277B4B80009AE1BC /* MathScreen.swift */,
 				8356E653277B4EB6009AE1BC /* MathButton.swift */,
+				833D4BD027987D740074774E /* NewMathButton.swift */,
 			);
 			path = Math;
 			sourceTree = "<group>";
@@ -111,6 +180,7 @@
 			children = (
 				838B8D0F27948ACC00AB2CF4 /* Settings.swift */,
 				838B8D112796ED7800AB2CF4 /* SettingsButton.swift */,
+				833D4BCB279837C30074774E /* SettingChanges.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -132,7 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				83BAA951279305D1009D3E4B /* VideoScreen.swift */,
-				83BAA95327931B13009D3E4B /* VideoButtons.swift */,
+				83BAA95327931B13009D3E4B /* VideoButtonBack.swift */,
+				833D4BDE2799CAFF0074774E /* VideoScreenForth.swift */,
 			);
 			path = VideoScreens;
 			sourceTree = "<group>";
@@ -192,12 +263,13 @@
 		83EA615627793CCD0060D511 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				833D4BD227988EF20074774E /* LVs */,
+				833D4BCD27986AB30074774E /* NewButton */,
 				838B8D0E27948ABA00AB2CF4 /* Settings */,
 				83F457DC2792F68F007CD45F /* Exercises */,
 				83C773AB2788DC7900E2D55A /* ConfigScreens */,
 				83BAFC92277B9E6C00E106FA /* VideoScreens */,
 				83BAFC8B277B708300E106FA /* MainMenu */,
-				8356E64E277B4A78009AE1BC /* Math */,
 				83EA61602779C74A0060D511 /* Courses */,
 			);
 			path = Components;
@@ -216,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				83F457DD2792F6A7007CD45F /* Exercise.swift */,
+				833D4BE02799CD810074774E /* ExerciseBackButton.swift */,
 			);
 			path = Exercises;
 			sourceTree = "<group>";
@@ -335,28 +408,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833D4BCF27986ACA0074774E /* NewButton.swift in Sources */,
 				83EA615C2779C0BA0060D511 /* Buttons.swift in Sources */,
 				83EA615827793CDA0060D511 /* Header.swift in Sources */,
 				838B8D122796ED7800AB2CF4 /* SettingsButton.swift in Sources */,
+				833D4BE52799DBB40074774E /* TitleLook.swift in Sources */,
+				833D4BDA279891A90074774E /* EnglishScreen.swift in Sources */,
 				83C773AD2788DCC000E2D55A /* StartingScreen.swift in Sources */,
 				83C773AF2788E1B400E2D55A /* DetailsInput.swift in Sources */,
 				83BAFC8F277B930E00E106FA /* MainButton.swift in Sources */,
 				83BAA952279305D1009D3E4B /* VideoScreen.swift in Sources */,
+				833D4BDF2799CAFF0074774E /* VideoScreenForth.swift in Sources */,
+				833D4BDD279891F60074774E /* SachScreen.swift in Sources */,
 				83EA614027793C290060D511 /* AppDelegate.swift in Sources */,
 				83EA615F2779C42E0060D511 /* Tabbar.swift in Sources */,
+				833D4BE12799CD810074774E /* ExerciseBackButton.swift in Sources */,
 				83C773B12788F3B800E2D55A /* ProfilePicture.swift in Sources */,
+				833D4BCC279837C30074774E /* SettingChanges.swift in Sources */,
 				8356E652277B4B80009AE1BC /* MathScreen.swift in Sources */,
 				83BAFC8D277B709600E106FA /* MainMenuButton.swift in Sources */,
 				8356E654277B4EB6009AE1BC /* MathButton.swift in Sources */,
+				833D4BD527988F0C0074774E /* GermanScreen.swift in Sources */,
 				83EA614527793C290060D511 /* BachelorApp.xcdatamodeld in Sources */,
 				83EA615A2779BEF60060D511 /* Top.swift in Sources */,
 				83EA614727793C290060D511 /* ContentView.swift in Sources */,
+				833D4BD72798901B0074774E /* GesamtScreen.swift in Sources */,
 				83EA614227793C290060D511 /* SceneDelegate.swift in Sources */,
 				8356E64B277AF1CE009AE1BC /* Friend.swift in Sources */,
 				8356E64D277AF285009AE1BC /* Friendlist.swift in Sources */,
 				838B8D1027948ACC00AB2CF4 /* Settings.swift in Sources */,
+				833D4BE32799D6440074774E /* LVBackButtonappearance.swift in Sources */,
 				83F457DE2792F6A8007CD45F /* Exercise.swift in Sources */,
-				83BAA95427931B13009D3E4B /* VideoButtons.swift in Sources */,
+				833D4BD127987D750074774E /* NewMathButton.swift in Sources */,
+				83BAA95427931B13009D3E4B /* VideoButtonBack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

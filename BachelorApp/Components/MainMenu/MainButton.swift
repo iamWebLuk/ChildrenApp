@@ -33,6 +33,7 @@ struct MainButton: View {
                     
                 Text(course)
                     .font(.system(size: 20))
+                    .foregroundColor(.black)
             }
             if isFlag == nil {
             Image(bild)

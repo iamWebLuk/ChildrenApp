@@ -12,6 +12,7 @@ struct Exercise: View {
     
     @State private var number: Int = 0
     @State private var textsts: String = ""
+    @Binding var nextButtonPressed: Bool
     var body: some View {
         ZStack {
          
@@ -51,8 +52,9 @@ struct Exercise: View {
                     .frame(height:10)
                     .background(Color.orange)
                 HStack {
-                VideoButtons(buttonName: "Zurück", color: .red, picture: "pencil")
-                    VideoButtons(buttonName: "Weiter", color: .green, picture: "pencil")
+                    ExerciseBackButton(buttonName: "Zurück", picture: "arrow.left", exerciseButton: $nextButtonPressed)
+//                VideoButtons(buttonName: "Zurück", color: .red, picture: "pencil")
+//                    VideoButtons(buttonName: "Weiter", color: .green, picture: "pencil")
                 }
             }
         }}
@@ -61,7 +63,7 @@ struct Exercise: View {
 
 struct Exercise_Previews: PreviewProvider {
     static var previews: some View {
-        Exercise()
+        Exercise(nextButtonPressed: .constant(false))
     }
 }
 

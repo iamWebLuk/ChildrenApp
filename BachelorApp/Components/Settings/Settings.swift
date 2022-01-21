@@ -9,19 +9,8 @@
 import SwiftUI
 
 struct Settings: View {
-    @State private var isEdit = false
     @State private var colorOfButton = Color.red
-    func buttonslk() -> Color {
-        if(isEdit) {
-            colorOfButton = Color.red
-            isEdit = true
-            return Color.green
-        } else {
-            colorOfButton = Color.green
-            isEdit = false
-            return Color.red
-        }
-    }
+  
     var body: some View {
         NavigationView {
             GeometryReader {
@@ -51,13 +40,10 @@ struct Settings: View {
                         .font(.system(size: 30))
                         .frame(width: 100, height: 80, alignment: .leading)
                 }
-                Spacer(minLength:  metrics.size.height * 0.3)
-                HStack(spacing:20) {
-//                    VideoButtons(buttonName: "Editieren", color: colorOfButton, picture: "wrench.fill")
-//                        .onTapGesture {
-//                            print("is edit \(isEdit)")
-                            
-                    SettingsButtons(buttonName: "buttonname", color: .purple, picture: "pencil")
+                Spacer(minLength:  metrics.size.height * 0.4)
+                HStack(spacing:50) {
+                    SettingsButton(buttonName: "Ändern", color: .red, picture: "gear")
+                        .font(.system(size: 30))
                             
                         }
                 }
@@ -65,7 +51,6 @@ struct Settings: View {
     }
         }
         .navigationBarTitle("Einstellungen")
-//        .padding(-50)
     }
 }
 

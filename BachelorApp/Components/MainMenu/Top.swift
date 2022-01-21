@@ -21,12 +21,12 @@ struct Top: View {
             VStack {
                 Text("<Name der App>")
                     .font(.system(size: 40, weight: .medium, design: .default))
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                      .padding()
                
                 VStack {
                     Text("<Name des Nutzers>")
-                    Text("<name de Nutzers")
+//                    Text("<name de Nutzers")
                         .font(.system(size: 25))
                         .foregroundColor(.white)
                     

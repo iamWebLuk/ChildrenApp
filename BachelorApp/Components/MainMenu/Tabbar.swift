@@ -9,34 +9,24 @@
 import SwiftUI
 
 struct Tabbar: View {
-    @State private var startingTab = 1
-    @State private var selectedIndex = 2
+    @State private var startingTab = 0
+    @State private var selectedIndex = 1
     @State private var isTrue = true
     
     init() {
-        UITabBar.appearance().backgroundColor = UIColor.darkGray
+        UITabBar.appearance().backgroundColor = UIColor.gray
     }
     var body: some View {
         NavigationView {
         TabView(selection:$startingTab) {
-            RedView()
+//            RedView()
+            GesamtScreen()
                 .tabItem {
-                        Image(systemName: "phone.fill")
+                        Image(systemName: "info.circle")
                             .background(Color.blue)
-                    Text("Testen")
+                    Text("About")
             }
                 .tag(0)
-            
-//            YellowView()
-//                .tabItem {
-//                    Image(systemName: "plus.circle.fill")
-//                    .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .frame(width: 50, height: 50, alignment: .center)
-//                        .foregroundColor(.blue)
-//
-//            }
-                .tag(1)
             BlueView()
                 .tabItem {
                     if #available(iOS 14.0, *) {
@@ -69,20 +59,41 @@ struct Tabbar: View {
 }
 
 struct RedView: View {
+    @State var mathButtonPressed = false
+    @State var englishButtonPressed = false
+    @State var germanButtonPressed = false
+    @State var backButtonPressed = false
     var body: some View {
-//    MathScreen()
-        ZStack {
-            Image("cartoon-background-green-valley_MJZrd1ud_thumb")
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
-            MainMenuButton(color: .purple, text: "deutsch")
-        }
+        Text("abc")
+//        ZStack {
+//
+//            Image("cartoon-background-green-valley_MJZrd1ud_thumb")
+//                .resizable()
+//                .scaledToFill()
+//                .edgesIgnoringSafeArea(.all)
+//            VStack {
+//                NewButton(buttonPressed: $mathButtonPressed, buttonName: "abc", bild: "1")
+//            if #available(iOS 14.0, *) {
+//                Spacer().fullScreenCover(isPresented: $mathButtonPressed) {
+//                    MathScreen(buttonPressed: $mathButtonPressed)
+//                }
+//            } else {
+//                // Fallback on earlier versions
+//            }
+//                NewButton(buttonPressed: $germanButtonPressed, buttonName: "edf", bild: "1")
+//            if #available(iOS 14.0, *) {
+//                Spacer().fullScreenCover(isPresented: $germanButtonPressed) {
+//                    GermanScreen(buttonPressed: $germanButtonPressed)
+//                }
+//            } else {
+//                // Fallback on earlier versions
+////            }
+//            }
+//        }
     }
 }
 
 struct BlueView: View {
-//    @Binding var nameOfUser: String
     var body: some View {
         ZStack {
             Image("cartoon-background-green-valley_MJZrd1ud_thumb")

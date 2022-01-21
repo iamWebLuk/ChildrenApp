@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct StartingScreen: View {
+    @State private var nameOfApp = ""
     var body: some View {
         NavigationView {
         ZStack {
@@ -16,11 +17,21 @@ struct StartingScreen: View {
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
             VStack(spacing:100) {
-                Text("<Name der App>")
+//                Text("<Name der App>")
+                Text("Name der App")
                     .font(.system(size: 40, weight: .medium, design: .default))
                     .foregroundColor(.black)
                      .padding()
-                DetailsInput()
+                if #available(iOS 14.0, *) {
+                    DetailsInput()
+                } else {
+                    // Fallback on earlier versions
+                }
+                Button {
+                    print("button is pressed")
+                } label: {
+                    Text("abc")
+                }
                 Spacer()
                 NavigationLink(destination: Tabbar()) {
                         Text("weiter")

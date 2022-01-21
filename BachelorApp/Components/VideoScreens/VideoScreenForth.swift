@@ -1,17 +1,18 @@
 //
-//  VideoButtons.swift
+//  VideoScreenForth.swift
 //  BachelorApp
 //
-//  Created by Lukas Weber on 15.01.22.
+//  Created by Lukas Weber on 20.01.22.
 //  Copyright © 2022 Lukas Weber. All rights reserved.
 //
 
 import SwiftUI
 
-struct VideoButtons: View {
+struct VideoScreenForth: View {
     var buttonName: String
-    var color: Color
     var picture: String
+    
+    @Binding var exerciseButton: Bool
     
     var body: some View {
         GeometryReader {
@@ -21,7 +22,8 @@ struct VideoButtons: View {
            
            
         Button {
-            print("abc")
+            exerciseButton = true
+            print("next")
         } label: {
             if #available(iOS 14.0, *) {
                 Label(buttonName, systemImage:picture)
@@ -33,15 +35,15 @@ struct VideoButtons: View {
         .foregroundColor(.white)
         .frame(width: buttonWidth, height: buttonHeight, alignment: .center)
         .frame(maxHeight: 50)
-        .background(color)
+        .background(Color.green)
         .cornerRadius(30)
             }
         
     }
 }
 
-struct VideoButtons_Previews: PreviewProvider {
+struct VideoScreenForth_Previews: PreviewProvider {
     static var previews: some View {
-        VideoButtons(buttonName: "abc", color: .red, picture: "pencil")
+        VideoScreenForth(buttonName: "Weiter", picture: "pencil", exerciseButton: .constant(false))
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        Tabbar()
+        Tabbar()
 //        Top()
 //        Buttons()
 //        StartingScreen()
@@ -18,7 +18,7 @@ struct ContentView: View {
 //        VideoScreen()
 //        Exercise()
 //        Settings()
-        StartingScreen()
+//        StartingScreen()
     }
 }
 

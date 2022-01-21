@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct DetailsInput: View {
-    @State var username = ""
+    @State var username: String = ""
     @State var age = ""
+    
     var body: some View {
         VStack {
             HStack {
