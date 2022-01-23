@@ -27,6 +27,8 @@ struct VideoScreen: View {
     @Binding var newMathButtonPressed: Bool
     @State var nextButtonPressed: Bool = false
     var videoID: String
+    var abc: String?
+    
     var body: some View {
         
         ZStack {
@@ -41,7 +43,7 @@ struct VideoScreen: View {
         GeometryReader {
             metrics in
             let
-            videoWidth = metrics.size.width * 0.8
+            videoWidth = metrics.size.width * 0.9
             let videoHeight = metrics.size.height * 0.70
             let buttonWidth = metrics.size.width * 0.4
             let buttonHeight = metrics.size.height * 0.1
@@ -58,12 +60,21 @@ struct VideoScreen: View {
                     .frame(width: videoWidth, height: videoHeight, alignment: .center)
                     .padding(.top, 30)
                 
+                
+                Text("Klicke Weiter um zu den Übungen zu gehen")
+                    .font(.system(size: 30))
+                    .frame(alignment: .center)
+//                    .padding(.bottom, 30)
+                    .padding(.top, 10)
+//                Spacer()
                 HStack {
                     VideoButtonBack(buttonName: "Zurück", color: .red, picture: "arrow.uturn.backward.circle", newMathButtonPressed: $newMathButtonPressed)
                      
                     VideoScreenForth(buttonName: "Weiter", picture: "arrow.forward", exerciseButton: $nextButtonPressed)
                     
                 }
+                .padding(.top, 20)
+
                 }
             }
         }
