@@ -10,6 +10,7 @@ import SwiftUI
 
 struct MathScreen: View {
     @State var wichExercise: String = ""
+    @State var isMathScreen = true
     @Binding var buttonPressed: Bool
     
     var exercises = ["Zahlen lernen", "Plus", "Minus", "Mal", "Durch"]

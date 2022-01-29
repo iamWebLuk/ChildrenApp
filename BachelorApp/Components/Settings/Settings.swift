@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+@available(iOS 14.0, *)
 struct Settings: View {
     @State private var colorOfButton = Color.red
   
@@ -28,17 +28,17 @@ struct Settings: View {
                 Text("Name:")
                         .font(.system(size: 30))
                         .frame(width: 100, height: 80, alignment: .leading)
-                    Text("Lukas")
+                    Text(UserDefaults.standard.string(forKey: "userName") ?? "Lukas")
                         .font(.system(size: 30))
-                        .frame(width: 100, height: 80, alignment: .leading)
+                        .frame(width: 120, height: 80, alignment: .leading)
                 }
                 HStack {
                 Text("Alter:")
                         .font(.system(size: 30))
                         .frame(width: 100, height: 80, alignment: .leading)
-                    Text("10")
+                    Text(UserDefaults.standard.string(forKey: "age") ?? "29")
                         .font(.system(size: 30))
-                        .frame(width: 100, height: 80, alignment: .leading)
+                        .frame(width: 120, height: 80, alignment: .leading)
                 }
                 Spacer(minLength:  metrics.size.height * 0.4)
                 HStack(spacing:50) {
@@ -54,6 +54,7 @@ struct Settings: View {
     }
 }
 
+@available(iOS 14.0, *)
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
         Settings()

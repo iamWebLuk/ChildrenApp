@@ -1,16 +1,20 @@
 PODS:
+  - SwiftFireworks (0.1.0)
   - youtube-ios-player-helper (1.0.4)
 
 DEPENDENCIES:
+  - SwiftFireworks
   - youtube-ios-player-helper
 
 SPEC REPOS:
   trunk:
+    - SwiftFireworks
     - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
+  SwiftFireworks: 63447e004fea5db5856a56065f4f0d2df23715b1
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 701f65215aaaf93bc28ba5bf15cb713430ce3ff0
+PODFILE CHECKSUM: c0ac9758a3a3a6e9390f625c92bf2ebc79a2a7ac
 
 COCOAPODS: 1.10.1

@@ -8,9 +8,15 @@
 
 import SwiftUI
 
+//@available(iOS 14.0, *)
+@available(iOS 15.0, *)
 struct DetailsInput: View {
-    @State var username: String = ""
-    @State var age = ""
+    
+    
+    
+//    @FocusState var amountIsFocused: Bool
+    @AppStorage("userName") var userName: String = ""
+    @AppStorage("age") var age: String = ""
     
     var body: some View {
         VStack {
@@ -18,10 +24,18 @@ struct DetailsInput: View {
             Text("Dein Name:")
                     .frame(width: 120)
                     .padding()
-            TextField("Hallo! Wie heißt du?", text: $username)
+            TextField("Hallo! Wie heißt du?", text: $userName)
                     .frame(width:200)
                     .padding()
                     .background(Color.white)
+//                    .focused($amountIsFocused)
+//                    .toolbar {
+//                        ToolbarItemGroup(placement: .keyboard) {
+//                            Button("duno") {
+//                            amountIsFocused = false
+//                        }
+//                        }
+                    }
                 Spacer()
             }
             
@@ -34,22 +48,39 @@ struct DetailsInput: View {
                     .padding()
                     .background(Color.white)
                     .keyboardType(.numberPad)
-                    .onTapGesture {
-                        endTextEditing()
-                    }
+//                    .focused($amountIsFocused)
+//                    .toolbar {
+//                        ToolbarItemGroup(placement: .keyboard) {
+//                            Button("Clik me") {
+//                                print("pressed")
+//                            }
+//                        }
+//                    }
+
                 Spacer()
             
-            }
-            }
-//            Spacer()
-//            ProfilePicture()
+//                }
         }
-    
+//        .toolbar {
+//            ToolbarItemGroup(placement: .keyboard) {
+//                Button("Done") {
+//                    amountIsFocused = false
+//                }
+//            }
+//            }
+        
+//        }
+    }
 }
 
+@available(iOS 15.0, *)
 struct DetailsInput_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsInput()
+        if #available(iOS 14.0, *) {
+            DetailsInput()
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }
 

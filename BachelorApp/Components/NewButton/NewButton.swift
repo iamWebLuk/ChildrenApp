@@ -18,7 +18,7 @@ struct NewButton: View {
     var course: String
     
     var body: some View {
-        NavigationView {
+        
         HStack {
             VStack {
             Button {
@@ -31,7 +31,7 @@ struct NewButton: View {
                         .resizable()
                         .frame(width: 150, height: 70)
                 Text(buttonName)
-                    .frame(width: 170, height: 110, alignment: .center)
+                    .frame(width: 160, height: 100, alignment: .center)
                     .foregroundColor(.black)
                 }
             }
@@ -53,10 +53,7 @@ struct NewButton: View {
                 }
                 
             }
-                .navigationBarHidden(true)
-                .navigationBarTitle("")
-                .navigationBarBackButtonHidden(true)
-            }
+            
         .background(buttonColor)
             .cornerRadius(30)
             }
@@ -65,6 +62,9 @@ struct NewButton: View {
 
 struct NewButton_Previews: PreviewProvider {
     static var previews: some View {
+        HStack {
         NewButton(buttonPressed: .constant(false), buttonName:"abc", bild: "1", buttonColor: .red, course: "abc")
+        NewButton(buttonPressed: .constant(false), buttonName: "def", bild: "1", buttonColor: .blue, course: "abc")
+        }
     }
 }

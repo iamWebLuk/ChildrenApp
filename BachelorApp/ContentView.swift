@@ -8,7 +8,9 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct ContentView: View {
+    
     var body: some View {
         Tabbar()
 //        Top()
@@ -19,9 +21,12 @@ struct ContentView: View {
 //        Exercise()
 //        Settings()
 //        StartingScreen()
+//        StartingScreen()
+        
     }
 }
 
+@available(iOS 14.0, *)
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct Tabbar: View {
     @State private var startingTab = 0
     @State private var selectedIndex = 1
@@ -17,16 +18,20 @@ struct Tabbar: View {
         UITabBar.appearance().backgroundColor = UIColor.gray
     }
     var body: some View {
-        NavigationView {
+//        NavigationView {
         TabView(selection:$startingTab) {
 //            RedView()
-            GesamtScreen()
-                .tabItem {
+            if #available(iOS 14.0, *) {
+                GesamtScreen()
+                    .tabItem {
                         Image(systemName: "info.circle")
                             .background(Color.blue)
-                    Text("About")
+                        Text("About")
+                    }
+                    .tag(0)
+            } else {
+                // Fallback on earlier versions
             }
-                .tag(0)
             BlueView()
                 .tabItem {
                     if #available(iOS 14.0, *) {
@@ -52,9 +57,9 @@ struct Tabbar: View {
         .accentColor(Color.init(red: 0/255, green: 0/255, blue: 0/255))
         .background(Color.black)
 }
-        .navigationBarHidden(true)
-        .navigationBarBackButtonHidden(true)
-}
+//        .navigationBarHidden(true)
+//        .navigationBarBackButtonHidden(true)
+//}
         
 }
 
@@ -65,31 +70,7 @@ struct RedView: View {
     @State var backButtonPressed = false
     var body: some View {
         Text("abc")
-//        ZStack {
-//
-//            Image("cartoon-background-green-valley_MJZrd1ud_thumb")
-//                .resizable()
-//                .scaledToFill()
-//                .edgesIgnoringSafeArea(.all)
-//            VStack {
-//                NewButton(buttonPressed: $mathButtonPressed, buttonName: "abc", bild: "1")
-//            if #available(iOS 14.0, *) {
-//                Spacer().fullScreenCover(isPresented: $mathButtonPressed) {
-//                    MathScreen(buttonPressed: $mathButtonPressed)
-//                }
-//            } else {
-//                // Fallback on earlier versions
-//            }
-//                NewButton(buttonPressed: $germanButtonPressed, buttonName: "edf", bild: "1")
-//            if #available(iOS 14.0, *) {
-//                Spacer().fullScreenCover(isPresented: $germanButtonPressed) {
-//                    GermanScreen(buttonPressed: $germanButtonPressed)
-//                }
-//            } else {
-//                // Fallback on earlier versions
-////            }
-//            }
-//        }
+        
     }
 }
 
@@ -106,6 +87,7 @@ struct BlueView: View {
     }
 }
 
+@available(iOS 14.0, *)
 struct GreenView: View {
     var body: some View {
 //        ZStack {
@@ -136,6 +118,7 @@ struct YellowView: View {
     }
 }
     
+@available(iOS 14.0, *)
 struct Tabbar_Previews: PreviewProvider {
     @State static var name = "lukas"
     static var previews: some View {

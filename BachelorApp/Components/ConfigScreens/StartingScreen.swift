@@ -8,11 +8,23 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
+@available(iOS 15.0, *)
 struct StartingScreen: View {
     @State private var nameOfApp = ""
+    @State private var nextButtonPressed = false
+    @available(iOS 15.0, *)
+    
+    
     var body: some View {
-        NavigationView {
         ZStack {
+            if #available(iOS 14.0, *) {
+                Spacer().fullScreenCover(isPresented: $nextButtonPressed) {
+                    Tabbar()
+                }
+            } else {
+                // Fallback on earlier versions
+            }
             Image("nerea-feral-pantalla-de-carga-para-after-mesa-de-trabajo-1")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
@@ -22,33 +34,32 @@ struct StartingScreen: View {
                     .font(.system(size: 40, weight: .medium, design: .default))
                     .foregroundColor(.black)
                      .padding()
-                if #available(iOS 14.0, *) {
+               
                     DetailsInput()
-                } else {
-                    // Fallback on earlier versions
-                }
-                Button {
-                    print("button is pressed")
-                } label: {
-                    Text("abc")
-                }
+                    .padding(.top, 100)
+//                Button {
+//                    print("button is pressed")
+//                    nextButtonPressed = true
+//                } label: {
+//                    Text("abc")
+//                        .frame(width: 100, height: 100, alignment: .center)
+//                        .background(Color.red)
+//                }
+//                .frame(width: 100, height: 200, alignment: .center)
                 Spacer()
-                NavigationLink(destination: Tabbar()) {
-                        Text("weiter")
+                StartSreenButton(buttonName: "cool", color: .purple, picture: "thumb.up")
                     }
-                    .padding()
-                    .background(Color.black)
+//                    .padding()
                 }
-            }
-        }
             .onTapGesture {
-                hideKeyboard()
-            }
-//            }
+//                .hideKeyboard()
         }
     }
+}
 
 
+@available(iOS 14.0, *)
+@available(iOS 15.0, *)
 struct StartingScreen_Previews: PreviewProvider {
     static var previews: some View {
         StartingScreen()

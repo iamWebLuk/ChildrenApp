@@ -35,7 +35,7 @@ struct VideoScreen: View {
             if #available(iOS 14.0, *) {
                 Spacer()
                     .fullScreenCover(isPresented: $nextButtonPressed) {
-                        Exercise(nextButtonPressed: $nextButtonPressed)
+                        Exercise(nextButtonPressed: $nextButtonPressed, isMathScreen: .constant(false))
                     }
             } else {
                 // Fallback on earlier versions

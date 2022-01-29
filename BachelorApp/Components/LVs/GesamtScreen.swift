@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct GesamtScreen: View {
        
         @State var mathButtonPressed = false
@@ -15,34 +16,35 @@ struct GesamtScreen: View {
         @State var germanButtonPressed = false
         @State var gymButtonPressed = false
         @State var backButtonPressed = false
-    
+    @State var userName = "default"
+    @AppStorage("userName") var username = ""
     
         var body: some View {
-//            ZStack {
+            ZStack {
 //    //
-//                Image("cartoon-background-green-valley_MJZrd1ud_thumb")
-//                    .resizable()
-//                    .scaledToFill()
-//                    .edgesIgnoringSafeArea(.all)
-//                    .frame(width: 400, height: 400)
+                Image("cartoon-background-green-valley_MJZrd1ud_thumb")
+                    .resizable()
+                    .frame(maxWidth: .infinity, maxHeight: 2000)
 //                    .overlay(
                 VStack {
+                    Text("Hallo \(username)!")
+                        .font(.system(size: 40))
+                        .bold()
+                        .padding(.bottom, 50)
+                        .padding(.top, 100)
+                    
                     HStack {
                         
                         
-                        
-                        // mathe
-                        
+                        // english
                         
                         
                         NewButton(buttonPressed: $englishButtonPressed, buttonName: "Englisch", bild: "usa_flag", buttonColor: .purple, course: "mathe")
-                if #available(iOS 14.0, *) {
+               
                     Spacer().fullScreenCover(isPresented: $englishButtonPressed) {
                         EnglishScreen(buttonPressed: $englishButtonPressed)
                     }
-                } else {
-                    // Fallback on earlier versions
-                }
+                
                         
                         
                         // deutsch
@@ -50,14 +52,11 @@ struct GesamtScreen: View {
                         
                         
                         NewButton(buttonPressed: $germanButtonPressed, buttonName: "Deutsch", bild: "Austria", buttonColor: .green, course: "deutsch")
-                if #available(iOS 14.0, *) {
+                
                     Spacer().fullScreenCover(isPresented: $germanButtonPressed) {
                         GermanScreen(buttonPressed: $germanButtonPressed)
                     }
-                } else {
-                    // Fallback on earlier versions
-    //            }
-                }
+                
             }
                     HStack {
                         
@@ -65,41 +64,35 @@ struct GesamtScreen: View {
                         
                         
                         NewButton(buttonPressed: $mathButtonPressed, buttonName: "Mathematik", isFlag: false, bild: "PLUS", buttonColor: .blue, course: "english")
-                    if #available(iOS 14.0, *) {
+           
                         Spacer().fullScreenCover(isPresented: $mathButtonPressed) {
                             MathScreen(buttonPressed: $mathButtonPressed)
                         }
-                    } else {
-                        // Fallback on earlier versions
-        //            }
-                    }
+
                         
                         // turnen
                         
                         
                         NewButton(buttonPressed: $gymButtonPressed, buttonName: "Sachunterricht", isFlag: false, isTree: true, bild: "tree", buttonColor: .orange, course: "sachunterricht")
-                        if #available(iOS 14.0, *) {
+
                             Spacer().fullScreenCover(isPresented: $gymButtonPressed) {
                                 SachScreen(buttonPressed: $gymButtonPressed)
-                            }
-                        } else {
-                            // Fallback on earlier versions
-            //            }
-//                        }
-                            
                     }
-                    
                 }
-//                )
+            }
+//            .padding(.leading, 40)
+//            .padding(.trailing, 40)
         }
-//            .background(Image("cartoon-background-green-valley_MJZrd1ud_thumb"))
     }
-        
 }
     
 
 struct GesamtScreen_Previews: PreviewProvider {
     static var previews: some View {
-        GesamtScreen()
+        if #available(iOS 14.0, *) {
+            GesamtScreen()
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }

@@ -1,14 +1,14 @@
 //
-//  ExerciseBackButton.swift
+//  ExerciseForthButton.swift
 //  BachelorApp
 //
-//  Created by Lukas Weber on 20.01.22.
+//  Created by Lukas Weber on 26.01.22.
 //  Copyright © 2022 Lukas Weber. All rights reserved.
 //
 
 import SwiftUI
 
-struct ExerciseBackButton: View {
+struct ExerciseForthButton: View {
     var buttonName: String
     var picture: String
     
@@ -23,7 +23,7 @@ struct ExerciseBackButton: View {
            
         Button {
             exerciseButton = false
-            print("back exercise")
+            print("forth exercise")
         } label: {
                 HStack {
                 Image(systemName: picture)
@@ -35,7 +35,7 @@ struct ExerciseBackButton: View {
         .foregroundColor(.white)
 //        .frame(width: buttonWidth, height: buttonHeight, alignment: .center)
         .frame(maxHeight: 50)
-        .background(Color.red)
+        .background(Color.green)
         .cornerRadius(30)
         
             }
@@ -43,8 +43,8 @@ struct ExerciseBackButton: View {
     }
 }
 
-struct ExerciseBackButton_Previews: PreviewProvider {
+struct ExerciseForthButton_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseBackButton(buttonName: "Zurück", picture: "arrow.left", exerciseButton: .constant(false))
+        ExerciseForthButton(buttonName: "Zurück", picture: "arrow.left", exerciseButton: .constant(false))
     }
 }

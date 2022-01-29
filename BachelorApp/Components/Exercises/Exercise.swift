@@ -13,7 +13,13 @@ struct Exercise: View {
     @State private var number: Int = 0
     @State private var textsts: String = ""
     @Binding var nextButtonPressed: Bool
+    @Binding var isMathScreen: Bool
+    
+    
+    
     var body: some View {
+        
+        
         ZStack {
          
         GeometryReader {
@@ -27,34 +33,41 @@ struct Exercise: View {
                 .opacity(0.4)
                 .frame(height: metrics.size.height * 1)
             
-//            VStack(spacing: heightSpacer) {
-            VStack {
+            VStack(spacing: heightSpacer) {
+//            VStack {
                 Spacer()
             HStack {
                 Text("2...")
                         .font(.system(size: 60))
-                    if #available(iOS 15.0, *) {
-                        TextField("?", text:$textsts)
-                            .disableAutocorrection(true)
-                            .border(.secondary)
-                            .frame(width: 60, alignment: .center)
-                            .font(.system(size: 60))
-                            .multilineTextAlignment(.center)
-                            .keyboardType(.numberPad)
-                    } else {
-                        // Fallback on earlier versions
-                    }
+                TextField("?", text: $textsts)
+                    .disableAutocorrection(true)
+                    .border(.gray)
+                    .frame(width: 60, alignment: .center)
+                    .font(.system(size: 60))
+                    .multilineTextAlignment(.center)
+                    .keyboardType(.numberPad)
+//                    if #available(iOS 15.0, *) {
+//                        TextField("?", text:$textsts)
+//                            .disableAutocorrection(true)
+//                            .border(.secondary)
+//                            .frame(width: 60, alignment: .center)
+//                            .font(.system(size: 60))
+//                            .multilineTextAlignment(.center)
+//                            .keyboardType(.numberPad)
+//                    } else {
+//                        // Fallback on earlier versions
+//                    }
                     Text("...4")
                         .font(.system(size: 60))
                         
             }
-                Spacer()
-                    .frame(height:10)
-                    .background(Color.orange)
+//                Spacer()
+//                    .frame(height:10)
+//                    .background(Color.orange)
                 HStack {
                     ExerciseBackButton(buttonName: "Zurück", picture: "arrow.left", exerciseButton: $nextButtonPressed)
-//                VideoButtons(buttonName: "Zurück", color: .red, picture: "pencil")
-//                    VideoButtons(buttonName: "Weiter", color: .green, picture: "pencil")
+                    .padding(.bottom, 10)
+                ExerciseForthButton(buttonName: "Weiter", picture: "arrow.right", exerciseButton: $nextButtonPressed)
                 }
             }
         }}
@@ -63,7 +76,7 @@ struct Exercise: View {
 
 struct Exercise_Previews: PreviewProvider {
     static var previews: some View {
-        Exercise(nextButtonPressed: .constant(false))
+        Exercise(nextButtonPressed: .constant(false), isMathScreen: .constant(false))
     }
 }
 

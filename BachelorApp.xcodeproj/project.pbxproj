@@ -24,6 +24,7 @@
 		8356E654277B4EB6009AE1BC /* MathButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356E653277B4EB6009AE1BC /* MathButton.swift */; };
 		838B8D1027948ACC00AB2CF4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B8D0F27948ACC00AB2CF4 /* Settings.swift */; };
 		838B8D122796ED7800AB2CF4 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B8D112796ED7800AB2CF4 /* SettingsButton.swift */; };
+		83AFDA3327A15EF100B72824 /* ExerciseForthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFDA3227A15EF100B72824 /* ExerciseForthButton.swift */; };
 		83BAA952279305D1009D3E4B /* VideoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAA951279305D1009D3E4B /* VideoScreen.swift */; };
 		83BAA95427931B13009D3E4B /* VideoButtonBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAA95327931B13009D3E4B /* VideoButtonBack.swift */; };
 		83BAFC8D277B709600E106FA /* MainMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BAFC8C277B709600E106FA /* MainMenuButton.swift */; };
@@ -42,6 +43,9 @@
 		83EA615A2779BEF60060D511 /* Top.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA61592779BEF60060D511 /* Top.swift */; };
 		83EA615C2779C0BA0060D511 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA615B2779C0BA0060D511 /* Buttons.swift */; };
 		83EA615F2779C42E0060D511 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA615E2779C42E0060D511 /* Tabbar.swift */; };
+		83ED66FE27A44C2400FA5611 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED66FD27A44C2400FA5611 /* ViewRouter.swift */; };
+		83ED670027A44C8100FA5611 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED66FF27A44C8100FA5611 /* MotherView.swift */; };
+		83ED670227A45DCE00FA5611 /* StartSreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED670127A45DCE00FA5611 /* StartSreenButton.swift */; };
 		83F457DE2792F6A8007CD45F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F457DD2792F6A7007CD45F /* Exercise.swift */; };
 		ABFECDA938FF5F477B2717CD /* Pods_BachelorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A384962056D22E66286D5AF5 /* Pods_BachelorApp.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +69,7 @@
 		8356E653277B4EB6009AE1BC /* MathButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathButton.swift; sourceTree = "<group>"; };
 		838B8D0F27948ACC00AB2CF4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		838B8D112796ED7800AB2CF4 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		83AFDA3227A15EF100B72824 /* ExerciseForthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseForthButton.swift; sourceTree = "<group>"; };
 		83BAA951279305D1009D3E4B /* VideoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreen.swift; sourceTree = "<group>"; };
 		83BAA95327931B13009D3E4B /* VideoButtonBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoButtonBack.swift; sourceTree = "<group>"; };
 		83BAFC8C277B709600E106FA /* MainMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuButton.swift; sourceTree = "<group>"; };
@@ -85,6 +90,9 @@
 		83EA61592779BEF60060D511 /* Top.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top.swift; sourceTree = "<group>"; };
 		83EA615B2779C0BA0060D511 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		83EA615E2779C42E0060D511 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		83ED66FD27A44C2400FA5611 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		83ED66FF27A44C8100FA5611 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
+		83ED670127A45DCE00FA5611 /* StartSreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSreenButton.swift; sourceTree = "<group>"; };
 		83F457DD2792F6A7007CD45F /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		A384962056D22E66286D5AF5 /* Pods_BachelorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BachelorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9A261A4955C0C90A1DC6C4 /* Pods-BachelorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BachelorApp.release.xcconfig"; path = "Target Support Files/Pods-BachelorApp/Pods-BachelorApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -214,6 +222,7 @@
 				83C773AC2788DCC000E2D55A /* StartingScreen.swift */,
 				83C773AE2788E1B400E2D55A /* DetailsInput.swift */,
 				83C773B02788F3B800E2D55A /* ProfilePicture.swift */,
+				83ED670127A45DCE00FA5611 /* StartSreenButton.swift */,
 			);
 			path = ConfigScreens;
 			sourceTree = "<group>";
@@ -248,6 +257,8 @@
 				83EA615027793C2C0060D511 /* Info.plist */,
 				83EA614327793C290060D511 /* BachelorApp.xcdatamodeld */,
 				83EA614A27793C2C0060D511 /* Preview Content */,
+				83ED66FD27A44C2400FA5611 /* ViewRouter.swift */,
+				83ED66FF27A44C8100FA5611 /* MotherView.swift */,
 			);
 			path = BachelorApp;
 			sourceTree = "<group>";
@@ -289,6 +300,7 @@
 			children = (
 				83F457DD2792F6A7007CD45F /* Exercise.swift */,
 				833D4BE02799CD810074774E /* ExerciseBackButton.swift */,
+				83AFDA3227A15EF100B72824 /* ExerciseForthButton.swift */,
 			);
 			path = Exercises;
 			sourceTree = "<group>";
@@ -421,7 +433,10 @@
 				833D4BDF2799CAFF0074774E /* VideoScreenForth.swift in Sources */,
 				833D4BDD279891F60074774E /* SachScreen.swift in Sources */,
 				83EA614027793C290060D511 /* AppDelegate.swift in Sources */,
+				83ED670027A44C8100FA5611 /* MotherView.swift in Sources */,
+				83AFDA3327A15EF100B72824 /* ExerciseForthButton.swift in Sources */,
 				83EA615F2779C42E0060D511 /* Tabbar.swift in Sources */,
+				83ED66FE27A44C2400FA5611 /* ViewRouter.swift in Sources */,
 				833D4BE12799CD810074774E /* ExerciseBackButton.swift in Sources */,
 				83C773B12788F3B800E2D55A /* ProfilePicture.swift in Sources */,
 				833D4BCC279837C30074774E /* SettingChanges.swift in Sources */,
@@ -438,6 +453,7 @@
 				8356E64D277AF285009AE1BC /* Friendlist.swift in Sources */,
 				838B8D1027948ACC00AB2CF4 /* Settings.swift in Sources */,
 				833D4BE32799D6440074774E /* LVBackButtonappearance.swift in Sources */,
+				83ED670227A45DCE00FA5611 /* StartSreenButton.swift in Sources */,
 				83F457DE2792F6A8007CD45F /* Exercise.swift in Sources */,
 				833D4BD127987D750074774E /* NewMathButton.swift in Sources */,
 				83BAA95427931B13009D3E4B /* VideoButtonBack.swift in Sources */,
