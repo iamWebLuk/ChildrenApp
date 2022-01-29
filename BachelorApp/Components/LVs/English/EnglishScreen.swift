@@ -8,21 +8,23 @@
 
 import SwiftUI
 
+@available (iOS 15.0, *)
 struct EnglishScreen: View {
 @State var wichExercise: String = ""
 @Binding var buttonPressed: Bool
 
 var exercises = ["Colors", "Numbers", "Family", "Animals", "Bodyparts"]
-var farben = [Color.green, Color.red, Color.blue, Color.yellow, Color.purple]
+var farben = [Color.orange, Color.yellow, Color.green, Color.blue, Color.indigo]
 var pictures = ["PLUS", "1", "minuss", "divi", "mal"]
     var videoID = ["E5b3hPDlO-I", "tbkP7FQy1WQ", "cllUMYCUQUw", "oDDkLGcje00", "j6g_OPGdblU"]
     
 var body: some View {
     ZStack {
-        Image("mathematics-background-different-numbers-pattern-2530108")
+        Image("london")
             .resizable()
             .edgesIgnoringSafeArea(.all)
             .scaledToFill()
+            .opacity(0.3)
         
         VStack(spacing:0.5) {
             Text("Englisch")
@@ -35,16 +37,12 @@ var body: some View {
                 NewMathButton(buttonText: exercises[num], buttonColor: farben[num], picture: pictures[num], videoID: videoID[num])
             }
                 
-            if #available(iOS 14.0, *) {
                 Spacer()
                     .fullScreenCover(isPresented: .constant(false), content: {
                         Text("fullscreen cover")
                     })
-            } else {
-                // Fallback on earlier versions
-            }
+
             Button {
-                print("abc")
                 buttonPressed = false
             } label: {
                 HStack {
@@ -60,6 +58,7 @@ var body: some View {
     }
 }
 
+@available(iOS 15.0, *)
 struct EnglishScreen_Previews: PreviewProvider {
 static var previews: some View {
     EnglishScreen(buttonPressed: .constant(false))

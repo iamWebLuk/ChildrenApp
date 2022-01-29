@@ -24,7 +24,7 @@ struct VideoButtonBack: View {
             newMathButtonPressed = false
             print("abc")
         } label: {
-            if #available(iOS 14.0, *) {
+            if #available(iOS 15.0, *) {
                 Label(buttonName, systemImage:picture)
                     .font(.system(size: 20))
             } else {

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
+@available(iOS 15.0, *)
 struct GesamtScreen: View {
        
         @State var mathButtonPressed = false
@@ -20,6 +20,9 @@ struct GesamtScreen: View {
     @AppStorage("userName") var username = ""
     
         var body: some View {
+            GeometryReader { metrics in
+                
+        var paddingLeft = metrics.size.width * 0.05
             ZStack {
 //    //
                 Image("cartoon-background-green-valley_MJZrd1ud_thumb")
@@ -40,6 +43,7 @@ struct GesamtScreen: View {
                         
                         
                         NewButton(buttonPressed: $englishButtonPressed, buttonName: "Englisch", bild: "usa_flag", buttonColor: .purple, course: "mathe")
+                            .padding(.leading, paddingLeft)
                
                     Spacer().fullScreenCover(isPresented: $englishButtonPressed) {
                         EnglishScreen(buttonPressed: $englishButtonPressed)
@@ -64,6 +68,7 @@ struct GesamtScreen: View {
                         
                         
                         NewButton(buttonPressed: $mathButtonPressed, buttonName: "Mathematik", isFlag: false, bild: "PLUS", buttonColor: .blue, course: "english")
+                            .padding(.leading, paddingLeft)
            
                         Spacer().fullScreenCover(isPresented: $mathButtonPressed) {
                             MathScreen(buttonPressed: $mathButtonPressed)
@@ -77,6 +82,7 @@ struct GesamtScreen: View {
 
                             Spacer().fullScreenCover(isPresented: $gymButtonPressed) {
                                 SachScreen(buttonPressed: $gymButtonPressed)
+                        }
                     }
                 }
             }
@@ -89,7 +95,7 @@ struct GesamtScreen: View {
 
 struct GesamtScreen_Previews: PreviewProvider {
     static var previews: some View {
-        if #available(iOS 14.0, *) {
+        if #available(iOS 15.0, *) {
             GesamtScreen()
         } else {
             // Fallback on earlier versions

@@ -8,12 +8,13 @@
 
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct GermanScreen: View {
 @State var wichExercise: String = ""
 @Binding var buttonPressed: Bool
 
-var exercises = ["A-F", "G-L", "M-R", "SV", "X-Z"]
-var farben = [Color.green, Color.red, Color.blue, Color.yellow, Color.purple]
+var exercises = ["A-F", "G-L", "M-R", "S-V", "X-Z"]
+var farben = [Color.orange, Color.yellow, Color.green, Color.blue, Color.indigo]
 var pictures = ["1", "PLUS", "minuss", "divi", "mal"]
     var videoID = ["luKyRCSxKL0", "IzIFU9JSFNk", "cllUMYCUQUw", "2bOxrAiULq0", "Ht6ZC6U5vQY"]
     
@@ -23,7 +24,7 @@ var body: some View {
             .resizable()
             .edgesIgnoringSafeArea(.all)
             .scaledToFill()
-            .opacity(0.5)
+            .opacity(0.3)
         
             VStack {
             Text("Deutsch")
@@ -33,7 +34,7 @@ var body: some View {
                 NewMathButton(buttonText: exercises[num], buttonColor: farben[num], picture: pictures[num], videoID: videoID[num])
             }
                 
-            if #available(iOS 14.0, *) {
+            if #available(iOS 15.0, *) {
                 Spacer()
                     .fullScreenCover(isPresented: .constant(false), content: {
                         Text("fullscreen cover")
@@ -59,6 +60,7 @@ var body: some View {
 }
         
 
+@available(iOS 15.0, *)
 struct GermanScreen_Previews: PreviewProvider {
     static var previews: some View {
         GermanScreen(buttonPressed: .constant(false))

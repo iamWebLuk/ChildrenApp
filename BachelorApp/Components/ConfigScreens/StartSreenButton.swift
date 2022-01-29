@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
+//@available(iOS 14.0, *)
 @available(iOS 15.0, *)
 struct StartSreenButton: View {
     
@@ -16,8 +16,8 @@ struct StartSreenButton: View {
     var color: Color
     var picture: String
     var buttonIsDisabled: Bool {
-        age.isEmpty ||    userName.isEmpty
-        
+//        age.isEmpty ||    userName.isEmpty
+        userName.isEmpty
     }
     
     
@@ -68,6 +68,7 @@ struct StartSreenButton: View {
             }
         }
         .disabled(buttonDis())
+//        .disabled(detailInput.textFieldIsEmpty())
 //        .foregroundColor(.white)
 //        .frame(width: buttonWidth, height: buttonHeight, alignment: .center)
 //        .frame(maxHeight: 50)
@@ -77,7 +78,7 @@ struct StartSreenButton: View {
     }
 }
 
-@available(iOS 14.0, *)
+//@available(iOS 14.0, *)
 @available(iOS 15.0, *)
 struct StartSreenButton_Previews: PreviewProvider {
     static var previews: some View {

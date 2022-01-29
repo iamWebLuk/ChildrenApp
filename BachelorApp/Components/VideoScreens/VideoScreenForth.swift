@@ -25,7 +25,7 @@ struct VideoScreenForth: View {
             exerciseButton = true
             print("next")
         } label: {
-            if #available(iOS 14.0, *) {
+            if #available(iOS 15.0, *) {
                 Label(buttonName, systemImage:picture)
                     .font(.system(size: 20))
             } else {

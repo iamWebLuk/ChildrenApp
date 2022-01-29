@@ -32,7 +32,7 @@ struct VideoScreen: View {
     var body: some View {
         
         ZStack {
-            if #available(iOS 14.0, *) {
+            if #available(iOS 15.0, *) {
                 Spacer()
                     .fullScreenCover(isPresented: $nextButtonPressed) {
                         Exercise(nextButtonPressed: $nextButtonPressed, isMathScreen: .constant(false))

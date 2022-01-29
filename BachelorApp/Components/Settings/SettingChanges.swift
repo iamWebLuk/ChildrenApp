@@ -8,13 +8,44 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
+//enum Numbers: String, CaseIterable {
+//    case ten = "10"
+//    case nine = "9"
+//    case eight = "8"
+//    case seven = "7"
+//    case six = "6"
+//}
+
+
+
+
+@available(iOS 15.0, *)
 struct SettingChanges: View {
     @State private var userName: String = ""
-//    @State private var age: String = ""
+    @State var selectedAge: Numbers = .six
+    
     @Binding var isShown : Bool
+    
     @AppStorage("userName") var username = ""
     @AppStorage("age") var age = ""
+    
+    func wichNumber() {
+        switch age {
+        case "10":
+            selectedAge = .ten
+        case "9":
+            selectedAge = .nine
+
+        case "8":
+            selectedAge = .eight
+
+        case "7":
+            selectedAge = .seven
+
+        default:
+            selectedAge = .six
+        }
+    }
     
     var body: some View {
             GeometryReader {
@@ -38,17 +69,32 @@ struct SettingChanges: View {
                             .background(Color.white)
                             .border(.gray)
                             .font(.system(size: 20))
+                            .submitLabel(.done)
                     }
                     HStack {
                     Text("Alter: ")
                             .frame(width: 100)
                             .font(.system(size: 20))
-                        TextField("Wie alt bist du?", text: $age)
-                                .frame(width:200)
-                                .padding()
-                                .background(Color.white)
-                                .border(.gray)
-                                .font(.system(size: 20))
+                        Picker(selection: Binding(get: {selectedAge}, set: {newValues in
+                            age = newValues.rawValue}
+                              ), label: Text("Picker"))
+                        {
+                            ForEach(Numbers.allCases, id: \.self) { number in
+                                Text(number.rawValue)
+                                
+                            }
+        //                    frame(width:100)
+                        }
+                        .frame(width:230, height: 50)
+                        .border(.primary)
+                        .background(Color.white)
+//                        TextField("Wie alt bist du?", text: $age)
+//                                .frame(width:200)
+//                                .padding()
+//                                .background(Color.white)
+//                                .border(.gray)
+//                                .font(.system(size: 20))
+//                                .submitLabel(.done)
                     }
                     Spacer()
                     Button {
@@ -77,7 +123,7 @@ struct SettingChanges: View {
 struct SettingChanges_Previews: PreviewProvider {
     @State static var isTrue = true
     static var previews: some View {
-        if #available(iOS 14.0, *) {
+        if #available(iOS 15.0, *) {
             SettingChanges(isShown: $isTrue)
         } else {
             // Fallback on earlier versions

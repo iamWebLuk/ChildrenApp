@@ -16,7 +16,7 @@ struct NewMathButton: View {
     @State var newMathButtonPressed: Bool = false
     var body: some View {
         VStack {
-            if #available(iOS 14.0, *) {
+            if #available(iOS 15.0, *) {
                 Spacer()
                     .fullScreenCover(isPresented: $newMathButtonPressed){
                         VideoScreen(newMathButtonPressed: $newMathButtonPressed, videoID: videoID)
@@ -37,8 +37,9 @@ struct NewMathButton: View {
                     
                 Text(buttonText)
                     .frame(width: 290, height: 100)
-                    .foregroundColor(.black)
+//                    .foregroundColor(.black)
                     .font(.system(size: 25))
+                    .foregroundColor(.white)
                 }
                 .background(buttonColor)
             }

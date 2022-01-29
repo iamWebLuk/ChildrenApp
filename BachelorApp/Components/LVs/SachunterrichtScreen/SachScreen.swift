@@ -8,13 +8,14 @@
 
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct SachScreen: View {
 @State var wichExercise: String = ""
 @Binding var buttonPressed: Bool
 
-var exercises = ["A-F", "G-L", "M-R", "SV", "X-Z"]
-var farben = [Color.green, Color.red, Color.blue, Color.yellow, Color.purple]
-    var pictures = ["1", "PLUS", "minuss", "divi", "mal"]
+    var exercises = ["Obst","Mensch","Natur","Pflanzen","Tiere"]
+var farben = [Color.orange, Color.yellow, Color.green, Color.blue, Color.indigo]
+    var pictures = ["apfel", "gesicht", "tree", "plant", "elefant"]
     var videoID = ["luKyRCSxKL0", "IzIFU9JSFNk", "cllUMYCUQUw", "2bOxrAiULq0", "Ht6ZC6U5vQY"]
     
 var body: some View {
@@ -23,6 +24,7 @@ var body: some View {
             .resizable()
             .edgesIgnoringSafeArea(.all)
             .scaledToFill()
+            .opacity(0.2)
         
         VStack(spacing:0.5) {
             Text("Sachunterricht")
@@ -32,7 +34,7 @@ var body: some View {
                 NewMathButton(buttonText: exercises[num], buttonColor: farben[num], picture: pictures[num], videoID: videoID[num])
             }
                 
-            if #available(iOS 14.0, *) {
+            if #available(iOS 15.0, *) {
                 Spacer()
                     .fullScreenCover(isPresented: .constant(false), content: {
                         Text("fullscreen cover")
@@ -58,6 +60,7 @@ var body: some View {
 }
     
 
+@available(iOS 15.0, *)
 struct SachScreen_Previews: PreviewProvider {
 static var previews: some View {
     SachScreen(buttonPressed: .constant(false))

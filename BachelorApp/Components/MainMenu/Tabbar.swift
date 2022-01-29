@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
+@available(iOS 15.0, *)
 struct Tabbar: View {
     @State private var startingTab = 0
     @State private var selectedIndex = 1
@@ -21,7 +21,6 @@ struct Tabbar: View {
 //        NavigationView {
         TabView(selection:$startingTab) {
 //            RedView()
-            if #available(iOS 14.0, *) {
                 GesamtScreen()
                     .tabItem {
                         Image(systemName: "info.circle")
@@ -29,9 +28,6 @@ struct Tabbar: View {
                         Text("About")
                     }
                     .tag(0)
-            } else {
-                // Fallback on earlier versions
-            }
             BlueView()
                 .tabItem {
                     if #available(iOS 14.0, *) {
@@ -87,7 +83,7 @@ struct BlueView: View {
     }
 }
 
-@available(iOS 14.0, *)
+@available(iOS 15.0, *)
 struct GreenView: View {
     var body: some View {
 //        ZStack {
@@ -118,7 +114,7 @@ struct YellowView: View {
     }
 }
     
-@available(iOS 14.0, *)
+@available(iOS 15.0, *)
 struct Tabbar_Previews: PreviewProvider {
     @State static var name = "lukas"
     static var previews: some View {

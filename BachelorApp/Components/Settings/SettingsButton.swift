@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
+@available(iOS 15.0, *)
 struct SettingsButton: View {
     
     var buttonName: String
@@ -40,7 +40,7 @@ struct SettingsButton: View {
         .background(color)
         .cornerRadius(30)
         .sheet(isPresented: $isShown) {
-                SettingChanges(isShown: $isShown)
+            SettingChanges(isShown: $isShown)
 
         }
             }
@@ -49,7 +49,7 @@ struct SettingsButton: View {
     }
 }
 
-@available(iOS 14.0, *)
+@available(iOS 15.0, *)
 struct SettingsButton_Previews: PreviewProvider {
     static var previews: some View {
         SettingsButton(buttonName: "abc", color: .red, picture: "pencil")

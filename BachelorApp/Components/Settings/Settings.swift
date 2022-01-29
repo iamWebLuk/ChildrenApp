@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-@available(iOS 14.0, *)
+@available(iOS 15.0, *)
 struct Settings: View {
     @State private var colorOfButton = Color.red
   
@@ -54,7 +54,7 @@ struct Settings: View {
     }
 }
 
-@available(iOS 14.0, *)
+@available(iOS 15.0, *)
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
         Settings()

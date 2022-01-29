@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
+//@available(iOS 14.0, *)
 @available(iOS 15.0, *)
 struct StartingScreen: View {
     @State private var nameOfApp = ""
@@ -18,22 +18,19 @@ struct StartingScreen: View {
     
     var body: some View {
         ZStack {
-            if #available(iOS 14.0, *) {
                 Spacer().fullScreenCover(isPresented: $nextButtonPressed) {
                     Tabbar()
                 }
-            } else {
-                // Fallback on earlier versions
-            }
             Image("nerea-feral-pantalla-de-carga-para-after-mesa-de-trabajo-1")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-            VStack(spacing:100) {
+//            VStack(spacing:100)
+            VStack {
 //                Text("<Name der App>")
                 Text("Name der App")
                     .font(.system(size: 40, weight: .medium, design: .default))
                     .foregroundColor(.black)
-                     .padding()
+                    .padding(.top, 100)
                
                     DetailsInput()
                     .padding(.top, 100)
@@ -58,7 +55,7 @@ struct StartingScreen: View {
 }
 
 
-@available(iOS 14.0, *)
+//@available(iOS 14.0, *)
 @available(iOS 15.0, *)
 struct StartingScreen_Previews: PreviewProvider {
     static var previews: some View {
